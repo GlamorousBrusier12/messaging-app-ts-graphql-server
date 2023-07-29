@@ -9,12 +9,7 @@ const yoga = createYoga({
   schema: createSchema({
     typeDefs: schema,
   }),
-  cors: {
-    origin: "*/*",
-    credentials: true,
-    allowedHeaders: ["X-Custom-Header"],
-    methods: ["POST"],
-  },
+  cors: false,
 });
 const server = createServer(yoga);
 

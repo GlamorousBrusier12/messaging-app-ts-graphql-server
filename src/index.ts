@@ -9,12 +9,7 @@ const yoga = createYoga({
   schema: createSchema({
     typeDefs: schema,
   }),
-  cors: {
-    origin: "https://messaging-app-client-xroh.onrender.com/",
-    credentials: true,
-    allowedHeaders: ["X-Custom-Header"],
-    methods: ["Post"],
-  },
+  cors: false,
 });
 const server = createServer(yoga);
 
